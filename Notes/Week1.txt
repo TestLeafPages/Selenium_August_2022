@@ -1,0 +1,215 @@
+Java 
+Installed JDK 1.8
+Eclipse
+
+
+Human -> Computer
+English -> Binary lang
+CPU
+
+JDK
+JRE - Source code of java and other supported files 
+JVM - Memory, Compiler, Other components
+
+Environment variable?
+
+IDE
+Write - Editor
+Correct - Compiler
+Run - Execution
+Output - Console
+Notepad
+javac file.java
+java file.java
+
+
+
+
+In java, we will write our code in Class.
+
+
+A class is a block of code which consist of variables and methods or
+data and actions.
+
+If we want to do any actions using java we need class
+
+Keywords
+keywords always starts with a lower case
+keywords should not be used for naming purpose
+package -> defines the class belongs which package
+public ->
+class -> which creates a new class
+
+
+Variables - Data
+Data types
+1. Primitive - 
+2. Derived / user defined
+
+Primitive data types
+char - 'a', 'b', 'A', 'B', '1', '/', ' ', '/n', '/t'
+2 -> binary
+ASCII
+
+1. Create a package week1.day1
+2. Create a class Car
+3. All data type variables
+
+Access modifiers
+public - any one inside my project can access
+private - any one inside my class can access
+package/default/no modifer - any one inside my package can access
+protected
+
+Operator
+unary
+++,--
+Incremental operator
+decremental operator
+
+binary
+Arithmetic operator
++,-,*,/,%
+Relational operator
+<,<=,>,>=,==,!=
+Logical opertor
+&& - AND logic 1 && logic 2 = both has to be satisfied
+|| - OR  logic 1 || logic 2 = any one has to be satisfied
+! - NOT !logic 1 -> Not satisfied
+ternary
+
+
+
+
+
+
+Recap week 1 day 1
+Basics of java
+JDK installation
+JDK, JRE and JVM
+
+IDE - Eclipse
+
+Maven Project
+package - should starts with a lower case
+Class - should starts with a upper case
+Class - Block of code which contains data (variables) and actions (methods).
+
+Variables
+Global/class-level variables
+dataType variableName = value;
+
+Primitive - byte, short, int, long, float, double, boolean, char
+
+Keywords 
+package, class, public, private, protected, static, void,
+if, byte, short, int, long, float, double, boolean, char
+
+main() -> ?
+
+sysout -> ?
+
+operators
+-> unary -> ++,--  -> a++ & ++a
+-> binary -> 
+arithmetic -> +,-,*,/,% 
+relational -> <,>,<=,>=,==,!=
+logical -> &&, ||, !
+-> ternary 
+
+Conditional statements
+If i want to make a decision
+Voting both
+1. if block alone
+if(age > 18){
+// true block
+allowed to vote
+}
+
+program continues here....
+
+2. Gender based condition
+washroom
+if and else
+if(gender = male){
+use male washroom
+}else{
+use female washroom
+}
+
+3. else if
+ranking process in school
+if (mark >= 90){
+First class
+} else if (90 > mark > 80){
+Second class
+} else if (80 > mark > 70){
+Third class
+} else if (mark < 35){
+fail
+}
+
+
+
+
+method, object, array, loop and string
+Methods
+1. if the return type is void, you should not add return statement.
+2. if the return type is not void, 
+then mentioned return type should be returned.
+3. return statement must be the last line of the method
+
+
+Any args or variables created inside the method is called as 
+method level variable.
+The scope of or the validity of the method level variable is 
+within the block. (out side the block it is invalid)
+
+
+
+Object -> key to the class
+
+Create a class Car
+1. print Car brand
+2. get car color
+3. get car engine number
+4. sub of numbers, mul of numbers, div of two numbers
+5. main method -> call all the methods
+Observe the output
+
+
+
+Constructor
+1. Constructor is a spl method which has class name as the method name
+2. Constructor do not have any return type
+3. Constructor is the gateway to the class
+4. Constructor takes the parameter/arg to the class
+5. if you have not given the constructor, java will create a virtual
+default constructor for the class to create an object.
+
+The constructor will give the ref of the class
+new will create a new memory space in heap memory and 
+store the ref of the class
+
+
+Object of the class also called as reference var or instance var
+
+
+Array
+Array is a concept of storing homogenous type of data.
+259619 -  names
+String name1 = "a";
+
+names = [a,b,c,d,e,...];
+Disadvantages of arrays
+1. Arrays needs size explicitly or implicitly
+2. Arrays can not be extended or shrinked dynamically
+
+
+1. Print Odd numbers from 51 to 77
+2. [22,67,98,1,34,58,99] -> second largest number? -> 98
+
+String
+We are going to learn the methods in the string class to manipulate
+the String values.
+String is immutable in nature.
