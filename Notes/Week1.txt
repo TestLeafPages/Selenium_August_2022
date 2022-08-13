@@ -76,7 +76,7 @@ Logical opertor
 && - AND logic 1 && logic 2 = both has to be satisfied
 || - OR  logic 1 || logic 2 = any one has to be satisfied
 ! - NOT !logic 1 -> Not satisfied
-ternary
+ternary ?:
 
 
 

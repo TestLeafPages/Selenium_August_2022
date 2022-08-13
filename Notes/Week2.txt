@@ -1,0 +1,91 @@
+Selenium:
+
+Selenium Webdriver -> API
+
+Include Selenium into my project
+
+Link to download open source APIs:https://mvnrepository.com/
+Link from the download is happening: https://repo1.maven.org/maven2
+
+How selenium works?
+
+Java+selenium script --> driver[Browser specific] --> Chrome -> Amazon.in
+
+For Handling drivers for our selenium script, we include webdrivermanager.
+
+Webdrivermanager common codes for all browsers setup:
+	WebDriverManager.edgedriver().setup();
+	WebDriverManager.firefoxdriver().setup();
+	WebDriverManager.operadriver().setup();
+	WebDriverManager.iedriver().setup();
+	WebDriverManager.safaridriver().setup();
+	WebDriverManager.chromedriver().setup();
+
+For specific browsers, selenium has specific classes:
+	Chrome - ChromeDriver
+	Firefox - FirefoxDriver
+	Edge - EdgeDriver
+	Safari - SafariDriver
+	
+URL for leaftaps: http://leaftaps.com/opentaps
+Credentials: Demosalesmanager/crmsfa
+
+Selenium interacts through the backend of the page.
+
+For accessing backend Right click on the element -> Inspect.
+
+DOM -> Document Object Model
+
+Dom contains the source code of the Webpage in HTML format.
+<html>...</html> - you will be able to write an HTML code.
+<head>...</head> - used to configure the header & title of the site.
+<body>....</body> - used to design the entire webpage.
+<div>...</div> & <span>....</span>
+used to create a partition in a page.
+<input> - used to create text box, button
+<button> - used to create a button
+<a> - used to create a link
+
+Concept of finding the particular element to interact with -> locator
+
+<input class="inputLogin" type="text" id="username" name="USERNAME" size="50">
+input -> tag name
+class,type,id,name,size -> attribute
+"inputLogin","text","username","USERNAME",... -> value
+
+<label for="password">   Password    </label>
+tag name -> label
+attribute -> for
+value -> password
+text -> Password
+
+
+When you have id, class & name attributes in the source code of the element
+that you want to interact, then you can use them as locators.
+
+When you find a <a> -> link -> you should use linktext, 
+Partial linktext as a locator.
+
+when not to use
+id = "username-123"
+class = "leaftaps login username"
+name = duplicate - tomorrow
+linktext and Partial linktext - <a>
+
+In Selenium, to handle drop down developed in <select> has Select class. 
+For every drop down you need to create a new obj with the drop down element in the constructor.
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
