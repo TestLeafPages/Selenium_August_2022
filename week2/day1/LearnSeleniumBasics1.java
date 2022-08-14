@@ -1,5 +1,7 @@
 package week2.day1;
 
+import java.time.Duration;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -18,6 +20,9 @@ public static void main(String[] args) {
 	
 	// To maximize the browser
 	driver.manage().window().maximize();
+	
+	// Implicit wait
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	
 	// To close the browser
 	driver.close();
