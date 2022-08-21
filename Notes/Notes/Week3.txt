@@ -1,0 +1,208 @@
+OOPS - Object Oriented Programming
+
+1. Abstraction
+2. Inheritance
+3. Polymorphism
+4. Encapsulation
+
+
+Abstraction - implements
+Blue print or Skeleton of a code.
+1. Interface
+2. Abstract Class
+
+Interface - is more like a class which contains
+			* Only abstract methods
+			* static final variables
+			
+You can not create an object for the interface.
+		
+final - keyword
+variables, methods and class
+variables -> value of the variable can never be changed
+
+
+Inheritance
+process of sharing one class members with another class without creating an object is called as inheritance.
+Simple inheritance - Parent and child
+Multilevel inheritance - Grand father, Parent and child
+Multiple inheritance - Is not supported in java.
+
+Grand father - club house in boat club
+My father - small 3 bhk individual duplex villa in Adayar - Parent/base
+Poor me - small 3 bhk villa in Thiruvanmiyur - Child/sub
+Me inherits my father
+Father inherited Grand father
+
+How many house I own? -> 2
+How many house My father own? -> 1
+
+How many house I own? -> 3
+How many house My father own? -> 2
+How many house My Grandfather own? -> 1
+
+
+Balakumar
+Balakumar's wife and Balakumar's mother
+Right -> Wife baked Idly  Left -> Mother baked Idly
+Balakumar -> ?
+
+Wife -> idly() 
+Mother -> idly()
+Balakumar extends Wife,Mother
+
+bala.idly() ->?
+
+static -> variable, method ( can not be overridden )
+
+final -> variable, method, class
+Variable -> value of the variable can not be changed in the future
+method -> can not be overridden
+Class -> can not be inherited
+
+super -> only with inheritance
+this -> new Constructor();
+
+Polymorphism
+Poly -> many
+Morphism -> form
+1. Method overloading
+* This happens only with the same class.
+* Same method name with different number of args
+* Same method name with different type of args
+
+2. Method overriding
+* This happens in the inherited classes only.
+* overridding the super class functionality in the sub class without
+changing the method signature.
+
+
+Collections - Class
+1.Required to store multiple data on a single variable
+Array - ?
+
+1. List
+2. Set
+3. Map
+
+1. List - Dynamic array
+List  - Interface
+ArrayList - Implementation class
+1. Single dimensional collection
+2. It maintains the insertion order.
+3. It allows duplicate data
+
+
+[Karthi, Arun, Dev, Selva, Anbu, Sekar] -> only the names 
+which starts with 'S' -> .startswith("S")
+[1,22,3,54,65,22,43] -> how many 22 are there in the list?
+
+Set -> Interface
+Implementation classes
+1. HashSet - Random output
+2. TreeSet - ASCII ordered output
+3. LinkedHashSet - Maintain the insertion order
+
+1. Set is a single dimensional collection.
+2. Set will allow only unique values.
+3. Set may/may not maintain the insertion order.
+
+TS:   [Jeevitha, Jyothi, Karthi, Stellah, Vani, Vidhya]
+HS:   [Stellah, Jeevitha, Jyothi, Vidhya, Vani, Karthi]
+LHS:  [Vidhya, Vani, Jeevitha, Stellah, Karthi, Jyothi]
+set.get(0); -> not allowed
+
+
+
+1. [1,22,3,54,65,22,43,67,98,1] - list 
+* Duplicate values: [1, 22]
+* Unique values: [1,22,3,54,65,43,67,98]
+
+
+Map - Interface
+Implementation class
+1. HashMap - Random
+2. TreeMap - Order
+3. LinkedHashMap - Maintains the insertion
+
+Based on the values
+
+1. Map is a two dimensional collection
+Key,value pair
+Key -> unique
+value -> duplicate
+
+10001, "Anita" -> Entry
+
+Map<Entry> -> Set<Entry>
+
+"testleaf" -> t=2,e=2,s=1,l=1,a=1,f=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			

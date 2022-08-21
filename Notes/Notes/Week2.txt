@@ -1,0 +1,201 @@
+Selenium:
+
+Selenium Webdriver -> API
+
+Include Selenium into my project
+
+Link to download open source APIs:https://mvnrepository.com/
+Link from the download is happening: https://repo1.maven.org/maven2
+In the system it will get downloaded to: .m2 folder
+
+
+How selenium works?
+
+Java+selenium script --> driver[Browser specific] --> Chrome -> Amazon.in
+
+For Handling drivers for our selenium script, we include webdrivermanager.
+
+Webdrivermanager common codes for all browsers setup:
+	WebDriverManager.edgedriver().setup();
+	WebDriverManager.firefoxdriver().setup();
+	WebDriverManager.operadriver().setup();
+	WebDriverManager.iedriver().setup();
+	WebDriverManager.safaridriver().setup();
+	WebDriverManager.chromedriver().setup();
+
+For specific browsers, selenium has specific classes:
+	Chrome - ChromeDriver
+	Firefox - FirefoxDriver
+	Edge - EdgeDriver
+	Safari - SafariDriver
+	
+URL for leaftaps: http://leaftaps.com/opentaps
+Credentials: Demosalesmanager/crmsfa
+
+Selenium interacts through the backend of the page.
+
+For accessing backend Right click on the element -> Inspect.
+
+DOM -> Document Object Model
+
+Dom contains the source code of the Webpage in HTML format.
+<html>...</html> - you will be able to write an HTML code.
+<head>...</head> - used to configure the header & title of the site.
+<body>....</body> - used to design the entire webpage.
+<div>...</div> & <span>....</span>
+used to create a partition in a page.
+<input> - used to create text box, button
+<button> - used to create a button
+<a> - used to create a link
+
+Concept of finding the particular element to interact with -> locator
+
+<input class="inputLogin" type="text" id="username" name="USERNAME" size="50">
+input -> tag name
+class,type,id,name,size -> attribute
+"inputLogin","text","username","USERNAME",... -> value
+
+<label for="password">   Password    </label>
+tag name -> label
+attribute -> for
+value -> password
+text -> Password
+
+
+When you have id, class & name attributes in the source code of the element
+that you want to interact, then you can use them as locators.
+
+When you find a <a> -> link -> you should use linktext, 
+Partial linktext as a locator.
+
+when not to use
+id = "username-123"
+class = "leaftaps login username"
+name = duplicate - tomorrow
+linktext and Partial linktext - <a>
+
+In Selenium, to handle drop down developed in <select> has Select class. 
+For every drop down you need to create a new obj with the drop down element in the constructor.
+
+#1 Id, #1 LinkText, #1 Partial LinkText [<a> - prefer only linktext]
+#2 class, #2 Name
+#3 xpath,
+CSS, tagname
+
+
+Xpath - Xml path - Route to the element
+1. absoulte xpath - / html tag - step by step
+2. relative xpath - // casa grande - famous place there and asking me to come
+
+Relative xpath
+1. Basics
+	1.1 attribute based xpath: other attributes as a locator - class with space
+		Equals:
+		Syntax: //tagname[@attribute = 'value']
+		xpath:  //label[@for = 'username']
+		
+		Partial:
+		Syntax: //tagname[contains(@attribute , 'value')]
+		xpath:  //form[contains(@action , '/opentaps')]
+		
+ 	1.2 text based xpath: text as a locator
+ 		Equals:
+ 		Syntax: //tagname[text() = 'value']
+ 		xpath:  //label[text() = 'Username']
+ 		
+ 		Partial:
+		Syntax: //tagname[contains(text() , 'value')]
+		xpath:  //label[contains(text() , 'erna')]
+ 	
+ 	1.3 collection - finite duplicate - index starts with 1
+ 		Syntax: (//xpath)[index]
+ 		xpath: (//input[@class='inputLogin'])[2]
+
+2. Axes - Based on relationship
+	2.1 Parent to child
+		Syntax: parent tag xpath/child tag name or xpath
+		xpath: //p[@class='top']/label  or //p[@class='top']/label[@for='username']
+	
+	2.2 Child to Parent
+		Syntax: child tag xpath/parent:: parent tagname or xpath
+		xpath: //label[text()='Username']/parent::p
+	
+	2.3 Grand Parent to Grand Child
+		Syntax: Grand parent xpath // Grand child tag name or xpath
+		xpath: //form[@id='login']//label
+	
+	2.4 Grand Child to Grand Parent
+		Syntax: Grand child xpath /ancestor:: Grand parent tag name or xpath
+		xpath: //label[text()='Username']/ancestor::form
+	
+	2.5 Elder sibling to younger sibling
+		Syntax: Elder sibling xpath / following-sibling:: younger sibling xpath or tagname
+		xpath: //label[text()='Username']/following-sibling::input
+	
+	2.6 Younger sibling to Elder sibling
+		Syntax: Younger sibling xpath / preceding-sibling:: Elder sibling xpath or tagname
+		xpath: //input[@id='username']/preceding-sibling::label
+	
+	2.7 Elder cousin to Younger cousin
+		Syntax: Elder cousin xpath / following:: younger cousin xpath or tagname
+		xpath: //label[text()='Username']/following::label
+	
+	2.8 Younger cousin to Elder cousin
+		Syntax: Younger cousin xpath / preceding:: elder cousin xpath or tagname
+		xpath: //label[text()='Password']/preceding::label
+		
+Web table
+<table>
+<tbody>
+<tr> <td></td> <td></td> <td></td> <td></td> </tr>
+<tr> <td></td> <td></td> <td></td> <td></td> </tr>
+<tr> <td></td> <td></td> <td></td> <td></td> </tr>
+<tr> <td></td> <td></td> <td></td> <td></td> </tr>
+</tbody>
+</table>
+
+
+Load https://erail.in/
+Enter MS in From and PDY in to
+Click on sort on date check box to uncheck it
+Take all rows and 1-9 cols data alone and print it
+
+Implicit wait...
+- One time configuration
+- findelement/findelements
+- 30 sec
+- will not throw any timeout exceptions
+- polling time - 500 ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
