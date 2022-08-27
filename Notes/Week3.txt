@@ -77,6 +77,107 @@ Morphism -> form
 changing the method signature.
 
 
+Collections - Class
+1.Required to store multiple data on a single variable
+Array - ?
+
+1. List
+2. Set
+3. Map
+
+1. List - Dynamic array
+List  - Interface
+ArrayList - Implementation class
+1. Single dimensional collection
+2. It maintains the insertion order.
+3. It allows duplicate data
+
+
+[Karthi, Arun, Dev, Selva, Anbu, Sekar] -> only the names 
+which starts with 'S' -> .startswith("S")
+[1,22,3,54,65,22,43] -> how many 22 are there in the list?
+
+Set -> Interface
+Implementation classes
+1. HashSet - Random output
+2. TreeSet - ASCII ordered output
+3. LinkedHashSet - Maintain the insertion order
+
+1. Set is a single dimensional collection.
+2. Set will allow only unique values.
+3. Set may/may not maintain the insertion order.
+
+TS:   [Jeevitha, Jyothi, Karthi, Stellah, Vani, Vidhya]
+HS:   [Stellah, Jeevitha, Jyothi, Vidhya, Vani, Karthi]
+LHS:  [Vidhya, Vani, Jeevitha, Stellah, Karthi, Jyothi]
+set.get(0); -> not allowed
+
+
+
+1. [1,22,3,54,65,22,43,67,98,1] - list 
+* Duplicate values: [1, 22]
+* Unique values: [1,22,3,54,65,43,67,98]
+
+
+Map - Interface
+Implementation class
+1. HashMap - Random
+2. TreeMap - Order
+3. LinkedHashMap - Maintains the insertion
+
+Based on the values
+
+1. Map is a two dimensional collection
+Key,value pair
+Key -> unique
+value -> duplicate
+
+10001, "Anita" -> Entry
+
+Map<Entry> -> Set<Entry>
+
+"testleaf" -> t=2,e=2,s=1,l=1,a=1,f=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

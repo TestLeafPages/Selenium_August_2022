@@ -1,0 +1,120 @@
+Selenium - ADV
+Snap shot
+Targetlocators
+Alert
+Frame
+window
+
+Snap shot
+Prntscrn -> Press I will take a snap shot
+MSPaint -> Paste the content in my clip board
+Save the image
+
+targetlocators
+1. Alert
+2. Frames
+3. Windows
+
+1.Alert
+FIre alert
+Rain Alert
+Alarm
+Amma wake up
+Salary Credited?
+Battery low
+EMI due
+low fuel
+Ambulance
+signal
+wife call
+Manager call
+
+
+Basic of alert
+Alert is model pop up
+Alert is a part js.
+
+1. When the alert is on, entire dom will be frozen.
+2. Cannot inspect an alert
+3. you cannot take a screen shot when an alert is open
+
+Members of alerts
+Alert text
+1 text field
+2 button - Yes/no
+
+
+
+Types of alerts
+Simple Alert - only text and one button
+Confirm Alert - Text with 2 buttons
+Prompt Alert - Text,text field, 2 buttons
+
+accept
+dismiss
+getText
+sendKeys
+
+Frames -> ?
+
+HTML -?
+
+<frame>
+<iframe>.....</iframe>
+nested html pages
+
+Nested Frame
+House -> Bedroom -> Bathroom
+Bathroom -> House -> defaultContent()
+Bathroom -> Bedroom -> parentFrame()
+
+Windows
+Session - ?
+C726CF585B8624122FD1D9B761F5388E
+0DAD34865F7C7E56F68ACE25BC05DAC4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
