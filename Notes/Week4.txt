@@ -73,6 +73,144 @@ Session - ?
 C726CF585B8624122FD1D9B761F5388E
 0DAD34865F7C7E56F68ACE25BC05DAC4
 
+String -> driver.getWindowHandle();
+Set<String> -> driver.getWindowHandles();
+Convert the Set -> List -> pickup unique locator -> get()
+driver.switchTo().window(list.get(1)); -> next window
+driver.switchTo().window(list.get(0)); -> base window
+
+What will happen if you have given a wrong or invalid reference -> ?
+NoSuchWindowException
+
+Window 1 -> Click -> Window 2
+Shifting to Window 2 -> Performing action -> driver.close() -> ?
+Window 2 will be closed -> focus will be nowhere
+You need to write code to switch to Window 1
+
+
+Window 1 -> Click -> Window 2
+driver.close() -> will close only the focused window
+driver.quit(); -> will close all the windows under the current session
+
+Window 1 -> Click -> Window 2, Window 3
+Dashboard			 Table page, Windows
+
+windowHandles = driver.getWindowHandles();
+
+for(String eachHandle:windowHandles){
+driver.switchTo().window(eachHandle);
+if(driver.getTitle().equals(Windows)){
+break;
+}
+}
+
+
+Actions - Class -> Selenium
+
+Adv User Interaction
+driver
+Will never throw any exception
+
+Multiple select
+Keydown -> Click on item1 , item 2, item 3 -> Keyup -> perform
+
+Waits
+
+Implicit
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
+
+
+// How many time you write ?  only once
+// Where to write? After launching browser
+// Which methods are affected? findElement, findElements
+// What happens after timeout? findElement -> NoSuchElementException, 
+findElements -> empty List
+
+
+
+
+Explicit
+1. Java
+Thread.sleep(5000) - 5 Seconds
+Hard wait
+2. Selenium
+Webdriverwait - class
+
+
+Exception 
+Handling by herself : try, catch, finally
+throw, throws
+
+try  -> {} should contain only the happy path the content that should happen
+
+try & catch
+try & finally
+try, catch & finally
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

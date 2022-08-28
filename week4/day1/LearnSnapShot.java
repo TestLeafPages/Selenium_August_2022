@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LearnSnapShot {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException  {
 		// To add driver to the code
 		WebDriverManager.chromedriver().setup();
 
