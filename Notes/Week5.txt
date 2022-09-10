@@ -1,0 +1,164 @@
+Java
+Selenium
+
+TestNG
+Total no of tc: 9000
+No of tc automated: 6700
+each test case takes around 1 min 30 sec
+1. If I want to run all the test cases in a single go?
+2. If I want to run all my test cases parallely?
+3. If I want to pass test data to test case?
+4. If I want to create a basic execution report?
+5. If I want to run only the failed cases?
+6. If I want to prioritize a test case?
+7. If I want to create a dependency between the test cases?
+8. If I want to run the same test case again and again?
+
+TestNG -> Test Next Generation
+Cedric Beust
+TestNG is an Unit Testing Framework/Execution Framework
+Java + .NET
+JUnit   NUnit
+
+TestNG -> ( Java + Selenium )
+
+TestNG dependency - TestNG plugin
+
+How to convert Java classes into executable TestNG class?
+1. Remove main method
+2. Replace with a normal method
+3. Include @Test -> org.testng.annotations.Test on top of the method
+
+
+How to run all the testng cases togeather sequentially?
+1. Select the classes that you want to run sequentially
+2. Right Click -> TestNG -> Convert to TestNG
+3. In the wizard -> Finish
+
+xml -> Suite
+The order in which the suite will run is the order in which you inserted 
+the testcases
+
+thread-count -> controls how many test cases can run in parallel
+default value of thread-count -> 5
+
+5 test cases and thread count 2
+test case 1    - Road 1 0s-30s
+test case 2    - Road 2 0s-45s
+test case 3    - Road 1 31s-75s
+test case 4    - Road 2 46s-90s
+test case 5    - Road 1 76s-100s
+
+XML
+<Suite>..</Suite>
+Collection of test
+
+TestNG Test -> individual testng class
+<test>..</test> -> Collection of TestNG Test
+
+<suite> can have multiple <test>
+<test> can have multiple <class>
+thread-count will work only if you have parallel
+
+
+<suite name="Leaftaps automation" parallel="tests" thread-count="2">
+  <test name="LFT-96321 Lead development">
+    <classes>
+      <class name="testcase.CreateLead"/>     Road 1 0-25
+      <class name="testcase.DuplicateLead"/>  Road 2 18-39
+      <class name="testcase.EditLead"/>       
+    </classes>
+  </test> <!-- Test -->
+   <test name="LFT-96320 Lead deletion">
+    <classes>
+      <class name="testcase.DeleteLead"/>     Road 2  0-17
+      <class name="testcase.MergeLead"/>      Road 1 26-39
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+Verbose - controller to throw exceptions as per the need in the console.
+default value -> 1
+Range of verbose -> 1-10
+Recommended value -> 5 or 6
+
+Verbose
+multiple test
+parallel in multiple test
+configure testng.xml
+
+Annotations will be @class or @interface
+@Test - this annotation, the class or the method becomes executable
+
+Any other annotations in TestNG?
+@Beforesuite - Start a report when the execution starts
+@Beforetest - Configure test level data to the report
+@Beforeclass - Configure test data for the test case
+@Beforemethod - Open the browser, url, maximize,implicit wait
+	@Test     -   Test script
+@Aftermethod - Close the browser
+@Afterclass
+@Aftertest
+@Aftersuite - End the report when the execution ends
+
+@Before annotations are pre conditions
+@After annotations are post conditions
+
+All 8 annotations are optional 
+@Test mandatory annotation
+
+@BeforeMethod @AfterMethod is called immediete conditions
+
+Annotations will search for the top most annotation not only inside the class
+but also in the inherited classes (super class).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
