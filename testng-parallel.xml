@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Leaftaps automation">
+  <test name="LFT-96321 Lead development" parallel="classes">
+    <classes>
+      <class name="testcase.CreateLead"/>     
+      <class name="testcase.DuplicateLead"/>  
+      <class name="testcase.EditLead"/>       
+    </classes>
+  </test> <!-- Test -->
+   <test name="LFT-96320 Lead deletion">
+    <classes>
+      <class name="testcase.DeleteLead"/>    
+      <class name="testcase.MergeLead"/>      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

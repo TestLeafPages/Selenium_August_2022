@@ -94,6 +94,7 @@ Any other annotations in TestNG?
 @Beforesuite - Start a report when the execution starts
 @Beforetest - Configure test level data to the report
 @Beforeclass - Configure test data for the test case
+@DataProvider - decides or defines the number of iteration in which @Test should work
 @Beforemethod - Open the browser, url, maximize,implicit wait
 	@Test     -   Test script
 @Aftermethod - Close the browser
@@ -111,6 +112,71 @@ All 8 annotations are optional
 
 Annotations will search for the top most annotation not only inside the class
 but also in the inherited classes (super class).
+
+
+Test data to the test cases
+
+1. Static - Parameterization
+2. Dynamic - DataProvider
+
+Create lead
+url
+browser
+platform
+
+Dynamic data
+username / password
+CName, FName, LName
+
+Static
+How to give parameters in the suite -> <parameter>
+<parameter name="url" value="http://leaftaps.com/opentaps/"/>
+url -> key
+"http://leaftaps.com/opentaps/" -> Value
+
+
+Dynamic data - test data
+Excel file
+System based -> Selenium
+Java -> do not have support for doing this.
+Testng -> no -> Execution fw
+
+Apache POI - JAR created by Apache for interacting with microsoft office products
+POI - Poor Obfuscation Implementation
+poi - .doc,.xls,.ppt,....
+poi-ooxml - .docx,.xlsx,.pptx
+
+@DataProvider is an annotation which is only method to send test data to @Test annotation
+@DataProvider must return the data in [][] format to @Test
+
+
+
+INTG:
+1. Move the data provider from test case class to the ProjectSpecificMethod
+2. Remove the hard coded values in the data provider
+3. ReadExcelData -> Replace main() with a normal method.
+4. ReadExcelData -> Make the excel file name dynamic.
+5. ReadExcelData -> Create a 2D array to store the data.
+6. ReadExcelData -> Store the data with proper index.
+7. ReadExcelData -> Return the 2D array of data.
+8. @DataProvider -> call ReadExcelData and get the 2D array of data.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

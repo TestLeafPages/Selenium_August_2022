@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Leaftaps Automation" verbose="5">
+  <test name="LFT-96320 Lead Deletion">
+    <classes>
+      <class name="testcase.EditLead"/>
+      <class name="testcase.DeleteLead"/>
+      <class name="testcase.CreateLead"/>
+      <class name="testcase.MergeLead"/>
+      <class name="testcase.DuplicateLead"/>
+    </classes>
+  </test> <!-- LFT-96320 Lead Deletion -->
+</suite> <!-- Leaftaps Automation -->
