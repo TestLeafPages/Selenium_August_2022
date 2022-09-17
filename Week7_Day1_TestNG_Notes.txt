@@ -1,0 +1,111 @@
+Attributes: All the attributes are methods
+-----------
+	Used to control the test execution
+	
+invocationCount
+----------------
+ - datatype is int
+ - default = 1
+ 
+priority : Starts execution from least value
+---------
+ default order -> ascii order
+ datatype = int
+ default value -> 0
+ 
+
+If multiple methods in a class with same annotation
+ - the order of execution will be based on ascii order 
+ 
+ 
+enabled:
+---------
+datatype -> boolean
+default value is true	
+
+
+Groups: Used to group the testcases based on modules / categories
+
+
+Scenario1: Total 10 testcases, 2 are failed and 8 are passed
+- Testers raised 2 defects
+- Developers fixed the defects and they give a new build
+- Retest failed testcases first
+
+Open testng-failed.xml and execute the failed testcases in the previous execution
+
+Scenario2: 5 test cases, 1 test case failed, and 4 passed
+
+How to rerun failed test cases programmatically:
+------------------------------------------------ 
+1. IRetryAnalyzer -> it is an interface -> will be having unimplemented method
+	Should have a class to implement the methods in interface
+
+Steps to implement Retry failed test cases:
+-------------------------------------------
+1. Create a class and implement IRetryAnalyzer
+2. Add unimplemented methods (retry())
+3. declare a global variable to define the number of retries (ex: int retryCount = 0)
+4. Implement retry() with if conditional statement
+5. Integrate the RetryFailed class with testcase using retryAnalyzer = <ClasssName>.class
+
+
+
+IAnnotationTransformer -> TestNG Listener
+------------------------------------------
+used to setup value for the attributes at runtime
+
+- It is an interface
+
+Steps to Implement IAnnotationTransformer:
+------------------------------------------
+1. Create a class and implement IAnnotationTransformer
+2. Implement transform() with ITestAnnotation argument
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
