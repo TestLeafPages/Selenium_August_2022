@@ -11,9 +11,9 @@ public class CreateLead extends ProjectSpecificMethods{
 	public void setData() {
 		excelFileName = "tc001";
 	}
-	@Test(dataProvider = "sendData")
+	@Test(dataProvider = "sendData", groups = "functional")
 	public void runCreateLead(String username, String password, String cname, String fname, String lname ) {
-		driver.findElement(By.id("username")).sendKeys(username);
+		driver.findElement(By.id("username123")).sendKeys(username);
 		driver.findElement(By.id("password")).sendKeys(password);
 		driver.findElement(By.className("decorativeSubmit")).click();
 		driver.findElement(By.linkText("CRM/SFA")).click();
