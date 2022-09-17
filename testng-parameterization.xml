@@ -5,16 +5,16 @@
   <test name="Parameter test - Chrome">
 	<parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcase.DeleteLead"/>
+     <!--  <class name="testcase.DeleteLead"/> -->
       <class name="testcase.CreateLead"/>
     </classes>
   </test> <!-- Test -->
   
-  <test name="Parameter test - Edge">
+  <!-- <test name="Parameter test - Edge">
 	<parameter name="browser" value="edge"/>
     <classes>
       <class name="testcase.DeleteLead"/>
       <class name="testcase.CreateLead"/>
     </classes>
-  </test> <!-- Test -->
+  </test> Test -->
 </suite> <!-- Suite -->
