@@ -1,0 +1,72 @@
+Cucumber - BDD
+Behavioural Driven Development
+Gives you Code + document
+
+
+Aspose
+JDave
+Jbehave
+.net
+Specflow
+
+
+
+Gherkin
+Feature - Functionality
+Scenario - Flow / Test case / Use case
+Given - PreConditions
+When - Test condition
+Then - Positive Expected Result
+But - Negative Expected Result
+And - Connects one or more PreCondition,TestCondition,ExpectedResult
+Background
+Scenario Outline
+Examples
+
+
+
+1. Feature File
+2. Step Definitions
+3. Runner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
