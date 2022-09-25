@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Leaftaps UI Automation">
+  <test name="Leads - Test">
+    <classes>
+      <class name="com.leaftaps.ui.leads.testcases.CreateLead"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
