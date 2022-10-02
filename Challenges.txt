@@ -1,0 +1,118 @@
+Top 5 Challenges that I faced during automation [STAR Approach - Situation Task Action Result]:
+
+1) Stale Element Reference Exception
+
+Situation: While automating 400+ tests and running them using Selenium Grid, I noticed several tests failing with Stale Element Reference exception and this caused lot of rework in the test automation project. 
+
+Task: Have to find the rootcause of this problem and fix it [Not having deeper understanding] !! 
+
+Root Cause: When the element was looked for its presence by findElement, the element was there. But it got disappeared, when you were about to interact with the element - sendKeys, click, clear !! 
+
+Action: 
+
+Option 1) Either add sleep statement before find the element [How long?]
+Best Option) Whenever there is stale element reference exception, find the element again !! 
+
+Result:
+
+This solved most of the common failures and the test automation results were helpful to speed up the testing efforts !! You are awarded 'STAR Award' !!
+
+
+2) Scaling selenium tests !! 
+
+Situation: We had 800+ tests to run on every build and it takes about more than 8 hours to complete. Customer wasn't happy with the timeline and hence, we were asked to find solution to run within 30 minutes !!
+
+Root cause: Why it is longer? Sequential (one after another) + Single Machine + Specific configuration 
+
+Task: 1) Identify how many machines we may need? --> 6 to 7 machines !!
+		- How many tests? How much it takes to run alone? 
+		- Can it be combined to run in parallel? --->>> TestNg Parallel option in XML 
+		- Can multiple browsers open in same machine? -->> Selenium WebDriver + TestNg 
+		- Can I have multiple machines? --->>> Selenium Grid
+		- With different configurations like OS, Browser version, Browsers !!? --->>> Selenium Grid
+
+	 Maths: Each test takes about 4 minutes to complete -> 800*4 = 3200 minutes -> Each machine (takes 5 browsers) -> 640 minutes per 		machine -> 6 Machines 
+
+      2) Who will maintain these machines? 
+
+      3) Is the cost of maintaining machines worth it? 
+
+
+Solution 1) Use Local Grid [Physical or VM always available] 
+	 2) Selenium Docker [Scale up or Scale down - work threads - containers] -> Selenium 4.x Dockerized Grid !!
+	 3) Using BrowserStack or AWS Farm or SauceLabs
+
+Result: Cut down the time from 8 hours to less than 30 minutes by scaling up using SauceLabs !! 
+
+3) Xpath Challenges due to dynamic application changes
+
+Situation: XPath keep breaking to dynamic element introduction or deletion in the given page or back of the screen
+
+Task: Find a common approach that can solve changing DOM element causing failures
+
+Action: Built an XPath based on unqiue screen or window name and from there -> traverse to the label denoting the element -> and then traverse to the exact element by its index helped to solve these dynamic changing problems / Used Chrome extensions like Ruto to assist on XPath auto generation
+
+Result: Saved lot of time and saved the script from failing changing DOM elements
+
+
+4) Upload file using WD  
+
+Situation: In my application, in multiple places - we had uploading files and unfortunately, the Selenium WebDriver does not support the windows or MAC elements (as it can only talk to browser), so we could not automate these well. 
+
+Task: Find workaround or solution that can asist to automate such uploads !!
+
+Action:
+
+Solution 1: Using java.awt.Robot -> Keyboard or mouse action to interact with Windows (You cannot run in parallel)
+Solution 2: Using Sikuli / AutoIt -> Record the windows element and help you to upload (Very flaky)
+Solution 3: Using file upload through input element //input[@type='file'] and send the file location and file name using sendKeys
+
+This works when you have multiple parallel execution and/or when executed in multiple machines and also when running in hidden mode
+
+Result: You could automate more scenarios without failures due to selenium non-support
+
+
+5) Chrome browser updates and driver compatibility 
+
+Bonus) Dropdown without select tags
+
+Situation: In my application, many dropdowns do not have select tag and hence i cannot use selectBy Method and hence challenged to automate
+
+Task: Find a working approach to automate these look-like dropdowns
+
+Action:
+
+1) Click on the dropdown icon and that can load the options
+2) Then click on the expected option
+
+
+Result:
+
+Able to automate non-select also like a select !!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
